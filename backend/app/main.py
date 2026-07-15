@@ -13,6 +13,11 @@ from app.models import AnalyzeRequest, AnalyzeResponse, MatchedIssue
 from app.graph import graph
 
 app = FastAPI(title="OSSPilot API")
+@app.get("/")
+def root():
+    return {
+        "message": "OSSPilot API is running"
+    }
 
 # Allow your deployed frontend (and localhost while developing) to call this API.
 # In production, replace "*" with your actual Vercel URL for tighter security.
