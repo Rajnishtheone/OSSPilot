@@ -27,7 +27,8 @@ export interface AnalyzeRequest {
   search_label?: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// Defaulting to your live Render backend URL so it works out-of-the-box on Vercel!
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://osspilot-api.onrender.com";
 
 export async function analyzeMessage(
   payload: AnalyzeRequest

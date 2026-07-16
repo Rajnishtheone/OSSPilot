@@ -4,7 +4,7 @@ All the data shapes used across the app.
 - AnalyzeRequest / AnalyzeResponse: what the frontend sends/receives from /api/analyze
 """
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field   
 from typing import List, Optional, Literal
 
 
