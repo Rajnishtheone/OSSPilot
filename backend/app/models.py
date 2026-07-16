@@ -31,10 +31,10 @@ class MatchedIssue(BaseModel):
 
 class AnalyzeResponse(BaseModel):
     status: Literal["needs_clarification", "complete"]
-    skills: List[str] = []
-    interests: List[str] = []
+    skills: List[str] = Field(default_factory=list)
+    interests: List[str] = Field(default_factory=list)
     confidence: float = 0.0
     clarify_question: Optional[str] = None
-    matched_issues: List[MatchedIssue] = []
-    searched_repos: List[str] = []
+    matched_issues: List[MatchedIssue] = Field(default_factory=list)
+    searched_repos: List[str] = Field(default_factory=list)
     contributing_guide: Optional[str] = None
